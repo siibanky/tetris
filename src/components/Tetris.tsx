@@ -1,6 +1,7 @@
 import Display from "./Display";
 import React from "react";
 
+
 const Tetris = () => {
     return (
         <div>
