@@ -1,4 +1,4 @@
-import Cell from "./Cell.tsx";
+import Cell from "./Cell";
 
 class Grid {
     cells: Cell[][];
