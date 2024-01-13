@@ -1,15 +1,19 @@
-import Cell from "./Cell";
+import Cell from "./Cell.tsx";
 
 class Grid {
-    private cells: Cell[][];
+    cells: Cell[][];
 
     constructor(width: number, height: number) {
-        // creates new grid, specified width & height, each cell in grid is an instance of the Cell class.
-        //creating new cell instance for each cell.
-        this.cells = Array(height).fill(null).map(() => {
-            return Array(width).fill(null).map((_, w) => new Cell(w, _));
-        });
-    };
+        this.cells = [];
+        for (let r = 0; r < height; r++) {
+            let row = [];
+            for (let c = 0; c < width; c++) {
+                const cell = new Cell(r, c);
+                row.push(cell);
+            }
+            this.cells.push(row);
+        }
+    }
 }
 
 export default Grid;
