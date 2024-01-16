@@ -10,13 +10,13 @@ const Stage = () => {
         let row = [];
         for (let c = 0; c < stageGrid.cells[r].length; c++) {
             if (stageGrid.cells[r] && stageGrid.cells[r][c]) {
-                row.push(<div key={c} className="cell"> {stageGrid.cells[r][c].r}, {stageGrid.cells[r][c].c} </div>);
+                row.push(<div className="cell"></div>);
             }
         }
-        ofiGrid.push(<div key={r}> {row} </div>);
+        ofiGrid.push(<div className="row"> {row} </div>);
     }
     return (
-        <div>
+        <div className="gridContainer">
             {ofiGrid}
         </div>
     )
