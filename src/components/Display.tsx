@@ -1,16 +1,18 @@
 import React from "react";
+import './Display.css'
 
 type DisplayProps = {
     scoreLabelText: string;
-    rowLabelText: string;
+    nextLabelText: string;
     levelLabelText: string;
 }
 
-const Display: React.FC<DisplayProps> = ({scoreLabelText, rowLabelText, levelLabelText}) => {
+const Display: React.FC<DisplayProps> = ({scoreLabelText, nextLabelText, levelLabelText}) => {
     return (
-        <div>{scoreLabelText},
-            {rowLabelText},
-            {levelLabelText}
+        <div className="sideLabels">
+            <div id="score">{scoreLabelText}</div>
+            <div id="next">{nextLabelText}</div>
+           <div id="level">{levelLabelText}</div>
         </div>
     )
 };
