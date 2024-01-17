@@ -1,17 +1,17 @@
 import Display from "./Display";
 import React from "react";
+import Stage from "./Stage";
+import StartGame from "./StartGame";
 
 
 const Tetris = () => {
     return (
         <div>
             < Stage/>
-            <aside>
-                <div>
-                    <Display scoreLabelText="Score" rowLabelText="Row" levelLabelText="Level"/>
-                </div>
-                < StartButton/>
-            </aside>
+            <div className="sideLabels">
+                <Display scoreLabelText="Score" nextLabelText="Row" levelLabelText="Level"/>
+            </div>
+            < StartGame/>
         </div>
     );
 };
