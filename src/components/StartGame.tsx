@@ -1,14 +1,15 @@
 import React from "react";
-import "./StartButton.css"
+import "./StartGame.css"
 
-
-const StartButton = () => {
+interface StartGameProps{
+   onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+}
+const StartGame: React.FC<StartGameProps> = ({ onClick }) => {
    return (
-
-       <button id="startButton"> Start Game</button>
+       <button id="startButton" onClick={(event) => onClick(event)}> Start Game</button>
    )
 }
 
 
 
-export default StartButton;
+export default StartGame;
